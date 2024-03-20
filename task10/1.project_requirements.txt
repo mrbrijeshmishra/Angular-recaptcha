@@ -1,0 +1,42 @@
+https://dev-api.newage.market/platform/api/usercategories
+
+https://dev-api.newage.market/platform/api/usersubcategories
+payload : {"catid":3}
+
+
+https://dev-platform.newage.market/signup
+
+image src
+https://dev-platform.newage.market/assets/images/logos/name-logo.svg
+
+# Adding recaptacha
+
+# install ng recaptcha
+# npm i ng-recaptcha@12.0.2  install cmd
+
+
+# in environment.ts
+# recaptcha: {
+#         siteKey: "6Ldwsp4pAAAAAJ5o9QeDG6C-WBLilW3gZa8_7spO",
+#       },  
+
+# in appmoudle.ts
+# import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha'; appmodule.ts
+# {
+#       provide: RECAPTCHA_V3_SITE_KEY,
+#       useValue: environment.recaptcha.siteKey,
+#     }, 
+# in component.ts inside constructor
+# private recaptchaV3Service :ReCaptchaV3Service
+
+# in ngonit or inside constructor
+# this.requestDataFromMultipleSources().subscribe((responseList) => {
+#       console.log('responseList')
+#      console.log(responseList[0])
+#     });  
+
+# in component.ts after constructor
+# public requestDataFromMultipleSources(): Observable<any[]> {
+#     let response1 = this.recaptchaV3Service.execute("importantAction");
+#     return forkJoin( [response1])
+#   }
