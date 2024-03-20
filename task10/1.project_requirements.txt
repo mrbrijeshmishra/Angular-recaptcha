@@ -20,12 +20,16 @@ https://dev-platform.newage.market/assets/images/logos/name-logo.svg
 #         siteKey: "6Ldwsp4pAAAAAJ5o9QeDG6C-WBLilW3gZa8_7spO",
 #       },  
 
-# in appmoudle.ts
+# in app.moudle.ts
 # import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha'; appmodule.ts
+# in imports in app.module.ts RecaptchaV3Module
+# then in providers of app.module.ts
 # {
 #       provide: RECAPTCHA_V3_SITE_KEY,
 #       useValue: environment.recaptcha.siteKey,
 #     }, 
+
+
 # in component.ts inside constructor
 # private recaptchaV3Service :ReCaptchaV3Service
 
